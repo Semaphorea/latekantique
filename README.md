@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
 
+Le serveur front-end angular démarre en configuration ssl avec proxy avec : 
+         ng serve --ssl --proxy-config ./src/app/Configuration/proxy.conf.json
+
+
+Le serveur back-end expressjs démarre grâce aux commandes          
+        en dev :   npm run startx    
+            
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
