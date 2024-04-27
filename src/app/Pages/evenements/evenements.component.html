@@ -1,0 +1,26 @@
+
+ <div class="page-content page-evenements">
+
+  <div class="breadcrump">
+   <ng-container  *ngFor="let breac of breadcrump;let i =index">      
+         
+       <a href="\{{breac}}">{{breac| titlecase }}</a>   
+       <span *ngIf="i < breadcrump.length - 1"> / </span>    
+  
+   </ng-container>
+  </div>
+    <ul class="evenement-container">   
+         
+        <ng-template   ngFor let-evenement [ngForOf]=" evenements"  >       
+           <li>
+             <article class="evenement-item">  
+            
+               <h3 class="event-title"> <span class="event-date" *ngIf=" evenement.date != null">{{ evenement.date[0]|date:'d LLL YYYY'}}</span> {{ evenement.title }}</h3>
+               <p class="event-description" *ngIf="evenement.photo != null" >{{evenement.description}}</p>
+
+              </article>   
+            </li>
+            </ng-template>    
+    </ul>
+
+ </div>   

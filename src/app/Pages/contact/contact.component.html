@@ -1,0 +1,15 @@
+
+<div class="page-content page-contact">
+
+
+    <ng-container class="breadcrump"  *ngFor="let breac of breadcrump;let i =index">     
+        
+        <a href="\{{breac}}">{{breac| titlecase }}</a> 
+        <span *ngIf="i < breadcrump.length - 1"> / </span>        
+    </ng-container>
+
+
+    <app-form-contact></app-form-contact>    
+
+
+</div>

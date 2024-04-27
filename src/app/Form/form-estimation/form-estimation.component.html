@@ -1,0 +1,30 @@
+
+
+<form class="form grid" #f="ngForm" (ngSubmit)="onSubmit(f)" enctype="multipart/form-data" method="POST" action="">   
+    <label for="">Prénom</label> 
+    <input  class="form-control"  type="text"  [(ngModel)]="client.firstname" name="firstname" placeholder="Firstname" required/>  
+    <label for="">Nom</label>
+    <input  class="form-control"  type="text"  [(ngModel)]="client.lastname"  name="lastname" placeholder="lastname"  required />  
+    <label for="email">Votre Email</label> 
+    <input class="form-control" type="text"  [(ngModel)]="estimation.email" name="email" placeholder="Email"/>
+    <label for="articleName">Nom d'Article</label>
+     <input class="form-control" type="text"  [(ngModel)]="estimation.articleName" name="articleName" placeholder="Désignation l'article"/>
+    <label for="features">Caractéristiques</label>
+     <input class="form-control" type="text" [(ngModel)]="estimation.features" name="features" placeholder="Caractéristiques"/> 
+    <label for="defaults">Défaults éventuels</label>
+    <input class="form-control" type="text" [(ngModel)]="estimation.defaults" name="defaults" placeholder="Défauts éventuels" required/>
+    <label for="signature">Signature</label>
+     <input class="form-control" type="text" [(ngModel)]="estimation.signature" name="signature" placeholder="Signature"/>  
+    <label for="author">Auteur</label>
+     <input class="form-control" type="text" [(ngModel)]="estimation.author" name="author" placeholder="Auteur·e"/>
+    <label for="creationYear">Date d'élaboration</label>
+    <input class="form-control" type="date" [(ngModel)]="estimation.creationYear" name="creationYear" required/>
+    <label for="firstCommercializationYear">Première commercialisation</label>
+    <input class="form-control" type="date" [(ngModel)]="estimation.firstCommercializationYear" name="firstCommercializationYear" required/>
+    <label for="photos">Photos</label>  
+    <input class="form-control" #photosInput type="file" [(ngModel)]="estimation.photos" name="photos" placeholder="Photos" multiple required/>
+   
+    <button class="button form-control  estimation-submit " type="submit">Envoyer</button>         
+    <button class="btn btn-secondary" type="reset" (click)="onReset()">Effacer</button>      
+</form> 
+   

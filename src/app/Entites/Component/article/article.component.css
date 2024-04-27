@@ -1,0 +1,80 @@
+.article-container {
+  width: 100%;
+}
+
+.page-salle-des-ventes {
+  width: 100%;
+}
+
+.articlelist {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 4rem;
+  margin-left: -0.5rem;
+}
+
+.articlesitem {
+  list-style: none;
+}
+
+.card .article-description {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.card-body {
+  display: grid;
+}
+.card-body img {
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.card-body .card-article-button {
+  width: 60% !important;
+  margin: 1rem auto;
+}
+.card-body .card-article-button:active {
+  background-color: #97da7b;
+}
+.card-body .article-caracteristiques {
+  justify-content: center;
+  margin: 0 auto;
+}
+.card-body .article-caracteristiques:last-child {
+  margin-bottom: 1rem;
+}
+
+.pagemanagement {
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  text-align: center;
+  grid-column: 1/span 4;
+}
+.pagemanagement ul li {
+  display: inline-block;
+  list-style: none;
+  text-decoration: none !important;
+  margin: 0 0.2rem;
+}
+.pagemanagement ul li:first-child:before {
+  content: "Pages ";
+}
+.pagemanagement ul li:not(:last-child):after {
+  content: " -";
+}
+.pagemanagement ul li:active {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 468px) {
+  .articlelist {
+    display: block;
+    margin-left: 0rem;
+    padding: 0rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}/*# sourceMappingURL=article.component.css.map */

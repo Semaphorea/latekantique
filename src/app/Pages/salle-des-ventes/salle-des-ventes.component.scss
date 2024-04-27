@@ -1,0 +1,20 @@
+
+.page-salle-des-vente{z-index:0;}
+
+
+
+@media screen and (min-width:468px)and (max-width:768px){         
+    .panier-container{position:absolute;left:20rem;top:7rem;}  }
+
+@media screen and (max-width:468px){
+    .panier-container{position:absolute;left:18rem;top:7rem;}  
+    .article-list li{ display:block!important;
+    }}
+
+@media screen and (min-width:768px) and (max-width:1200px){ 
+    .panier-container{position:absolute;left:24rem;top:7rem;}  
+}    
+
+@media screen and (min-width:1200px){ 
+    .panier-container{position:absolute;right:24rem;top:7rem;}  
+}  

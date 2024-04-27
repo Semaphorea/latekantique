@@ -1,0 +1,30 @@
+<div class="page-content page-commande">
+
+
+    <ng-container class="breadcrump"  *ngFor="let breac of breadcrump;let i =index">     
+
+
+        <a href="\{{breac}}">{{breac  | titlecase  }}</a> 
+        <span *ngIf="i < breadcrump.length - 1"> / </span>          
+    </ng-container>
+    
+
+     
+    <div class="authentification">        
+        <app-form-authentication [authentification]="authentification" (authentification)="authentificationChange"></app-form-authentication> 
+    </div>
+      
+    
+    <!-- <app-checkout-form></app-checkout-form>    -->  
+    <app-overviewcommande class="commandeoverview" [commande]="commande"   [authentification]="authentification" (authentification)="authentificationChange" (paiementtype)="paimenttype" [currency]="currency" (currency)="currencyChange"></app-overviewcommande>  
+    <!-- <app-express-checkout-element></app-express-checkout-element> -->
+    <!-- <app-overviewcommande class="commandeoverview" [commande]="commande"    ([authentification)]="authentification"  (paiementtype)="paimenttype"></app-overviewcommande> -->
+
+
+  
+
+
+
+    
+
+</div>

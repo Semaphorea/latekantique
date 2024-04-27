@@ -6,7 +6,7 @@
     "laTekAntique": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
+        "@schematics/angular:component": {  
           "style": "scss"
         }
       },
@@ -15,13 +15,24 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "allowedCommonJsDependencies": ["crypto","stream","jsonwebtoken","CommonModule" ,"CommonJS"],
+            "customWebpackConfig": { 
+              "path": "./src/app/Configuration/custom-webpack.config.js",
+              "resolve": {
+                "fallback": {                  
+                  "util": false
+                  }   
+                 
+              }
+            },  
             "outputPath": "dist/la-tek-antique",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
+            "polyfills": [  
               "zone.js"
+            
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -30,7 +41,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/Styles/styles.scss"
             ],
             "scripts": []
           },
@@ -51,7 +62,7 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
+              "buildOptimizer": false, 
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
@@ -65,12 +76,20 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "laTekAntique:build:production"
+              "browserTarget": "laTekAntique:build:production",
+              "proxyConfig": "./src/app/Configuration/proxy.conf.json"
             },
             "development": {
-              "browserTarget": "laTekAntique:build:development"
-            }
+              "browserTarget": "laTekAntique:build:development",
+              "proxyConfig": "./src/app/Configuration/proxy.conf.json"
+            },
+            "options": {  
+              allowedCommonJsDependencies": [
+                "moment"
+             ]
+            } 
           },
+         
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
@@ -100,5 +119,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false  
   }
 }

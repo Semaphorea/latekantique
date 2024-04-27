@@ -1,0 +1,7 @@
+<div #menuList>
+    <div class="list-view" *ngIf="visible">
+        <div *ngFor="let i of items" (click)="select(i)">
+            <ng-container *ngTemplateOutlet="template; context:{item: i}"></ng-container>  
+        </div>  
+    </div>
+</div>

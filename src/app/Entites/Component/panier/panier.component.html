@@ -1,0 +1,29 @@
+
+
+<div class="panier">  
+      
+   
+        <button   (click)="togglePanierComponent()">Accès panier</button>
+      
+        <ng-container  *ngIf="panier!=[] && showpaniercomponent===true">  
+        
+            <div  class="list-panier-container">          
+                  <ul class="list-panier-container">  
+                     <!--  <ng-template ngFor="let article in panier" >  -->
+                    <ng-template ngFor let-article [ngForOf]="panier" let-i="index"  >  
+                        <li>
+                            <span class="panier description">{{article.title}}</span> : <span>{{article.price}} € </span><button class="panier-suppression-article" (click)="supprArticle(article)" >Suppr</button>                        
+                        </li>  
+                    </ng-template>      
+               </ul>   
+               <div class="panier-total">Total H.T : <ng-container *ngIf="panier !== null; else noArticle">{{ calculatePrice()}}</ng-container>
+                                                       <ng-template #noArticle>
+                                                           <span>No article available.</span>
+                                                       </ng-template> </div>   
+               <button class="panier-button panier-commander"  (click)="createCommande(panier,totalHT)">Commander</button> 
+               <button class="panier-button panier-supprimer"  (click)="deleteCommande(panier)">Supprimer</button>    
+            </div>
+
+        </ng-container>
+        
+</div>

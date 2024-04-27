@@ -1,0 +1,66 @@
+
+<div class="page-content page-paiement" >
+    
+    
+    
+        <div class="breadcrump"> 
+            <ng-container  *ngFor="let breac of breadcrump;let i =index">        
+                  
+                <a href="\{{breac}}">{{breac|titlecase}}</a>      
+                <span *ngIf ="i < breadcrump.length - 1"> / </span>    
+          
+            </ng-container>
+        </div>     
+    
+
+
+     <span>typepaiement : {{paimenttype}}</span>
+  
+   
+     
+     <ng-container  *ngIf = "paimenttype == 'carte' ;then ecarte else autre " ></ng-container>
+     
+     <ng-template #ecarte  >  
+      
+        
+      
+          <p>Vous allez être rediriger dans moins de 30 secondes ! </p>   
+          <div class="lds-dual-ring"></div>     
+       
+        
+    
+    
+     </ng-template>    
+
+   
+      
+   
+
+<ng-template #autre  >
+    <ng-container  *ngIf = "paimenttype == 'epaiment' ;then epaimenteff else paimentcheque"></ng-container>
+         
+    <ng-template #epaimenteff  >
+      <app-paypal  [commande]="commande" [(ngModel)]="commandevalidee"   > </app-paypal>    
+        
+
+    </ng-template>
+    
+
+    <ng-template #paimentcheque > 
+
+        <div>Merci d' envoyer votre bon de commande et votre chèque à l'ordre de LaTekantique   <br/>
+              à l'adresse suivante : ....
+              <p>Veuillez indiquer la référence de votre commande au dos de votre chèque.</p>
+              <p>Votre commande sera envoyée à la réception de votre paiement.</p>            
+        </div>
+   
+    </ng-template>
+
+
+</ng-template>  
+
+
+ <!-- <ng-content *ngIf = "(paimentStatus$|async) as paimentStatus==='success'; then commandevalide else commandeinvalide" ></ng-content>  -->
+
+
+</div>

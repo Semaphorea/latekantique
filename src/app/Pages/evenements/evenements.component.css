@@ -1,0 +1,16 @@
+.evenement-container {
+  padding-top: 3rem;
+}
+.evenement-container li {
+  list-style: none;
+}
+
+.evenement-item {
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  ol, ul {
+    padding-left: 0;
+  }
+}/*# sourceMappingURL=evenements.component.css.map */

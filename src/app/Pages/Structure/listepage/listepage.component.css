@@ -1,0 +1,9 @@
+.nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav ul li {
+  margin-right: 1rem;
+}/*# sourceMappingURL=listepage.component.css.map */

@@ -1,0 +1,11 @@
+
+<ng-template *ngif="this.classe!=null; withoutclass" >
+      <div class="photo {{ this.classe }}" >
+         <img src="{{photo.photo_url}}" title="{{photo.title}}" alt="{{photo.title}}" />
+      </div>
+      <div class="photo" #withoutclass >
+         <img src="{{photo.photo_url}}" title="{{photo.title}}" alt="{{photo.title}}" />
+      </div>
+</ng-template>  
+   
+    

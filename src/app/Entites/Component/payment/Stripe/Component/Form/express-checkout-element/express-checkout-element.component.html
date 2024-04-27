@@ -1,0 +1,12 @@
+<div maxWidth="900">
+    <div color="secondary" section-content-header>
+      <span>Express Checkout Element</span>
+    </div>
+    <div section-content>
+      <ngx-stripe-elements [stripe]="stripe" [elementsOptions] ="elementsOptions">
+        <ngx-stripe-express-checkout [options]="options"   (cancel)="onCancel()"   (shippingaddresschange)="onShippingAddressChange(shippingAddressEvent)"   
+        (shippingratechange)="onShippingRateChange(shippingRateEvent)" />  
+      </ngx-stripe-elements>
+      <button (click)="pay()">PAY</button>
+    </div>
+  </div>

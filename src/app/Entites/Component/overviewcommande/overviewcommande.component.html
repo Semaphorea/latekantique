@@ -1,0 +1,56 @@
+<ng-container class="commande" *ngIf ="commande!=null">
+    <h3>Votre commande</h3>
+
+ 
+
+    <app-currency  (change)="onCurrencyChange()" [(ngModel)]="currency" ngDefaultControl></app-currency>             
+     
+
+   <div class="refcommande"> Référence : {{commande.reference}}</div>
+     <table class="commandeTab table"  >  
+       
+       <thead><th>Désignation</th><th>Description</th><th>Prix Unitaire</th><th>Prix Total</th></thead>
+       <tbody>       
+        
+        
+          <tr *ngFor="let articl of commande.articles;let i=index">
+              <td>{{articl.title}}</td><td>{{articl.description}}</td><td>{{articl.price}}</td><td>{{articl.price}}</td>    
+          </tr>
+      
+           
+       </tbody>
+       <tfoot>
+          <tr>
+              <td></td><td></td><td>Total HT</td><td>{{commande.totalHT}}</td>
+            </tr>   
+            <tr>
+              <td></td><td></td><td>Frais d'envoi</td><td>{{commande.shipping}}</td>   
+            </tr>  
+            <tr>  
+              <td></td><td></td><td>Assurance</td><td>{{commande.insurance}}</td>    
+            </tr>  
+            <tr>
+              <td></td><td></td><td>Total TTC</td><td>{{commande.totalTTC}}</td> 
+          </tr>
+       </tfoot>
+        
+
+
+     </table>  
+
+
+
+     <div id="modepaiement">  
+
+      <form id="selectionpaiement" class="selectionpaiement" #f="ngForm" (ngSubmit)="onSubmit(f,commande)"  method="POST" action="">    
+            <fieldset>
+              <input type="radio" id="carte"  name="paimenttype"   [(ngModel)]="paimenttype"   value="carte" ><label for="carte"><img src="/assets/Images/Illustrations/Icones/carte-de-credit.png" alt="Carte banquaire" title="Carte" width="100%" height="100%"/><span class="typePaiment">Carte Banquaire</span></label> 
+              <input type="radio" id="epaiment" name="paimenttype" [(ngModel)]= "paimenttype" value="epaiment"><label for="epaiment"><img src="/assets/Images/Illustrations/Icones/paypal.png" alt="Paiment Electronique" title="Paiment Electronique"  width="100%" height="100%"/><span class="typePaiment">Paypal</span></label>
+              <input type="radio" id="cheque"  name="paimenttype"  [(ngModel)]="paimenttype"  value="cheque"><label for="cheque"><img src="/assets/Images/Illustrations/Icones/cheque.png" alt="Paiment par Chèque" title="Paiment par Chèque" width="100%" height="100%" /><span class="typePaiment">Chèque</span></label>
+            </fieldset>  
+            
+            <button  class="button submit" type="submit" >Passer Commande</button>  
+            <div class="message">{{message}}</div>   
+      </form>     
+   
+   </div>

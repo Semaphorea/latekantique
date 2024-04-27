@@ -1,0 +1,10 @@
+<div id="currency">
+
+     <form name="currencyForm" #currencyForm >
+        <select id="selectCurrency" name="selectCurrency" [(ngModel)] = "currency" > 
+                <option  *ngFor="let curren of currencylist; index as i" class="currency-item currency-item-{{curren.id}}" [value]="curren.text">{{curren.text}}</option>
+        </select>
+    </form>
+
+
+</div> 

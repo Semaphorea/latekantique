@@ -1,0 +1,27 @@
+
+<div class="page-content page-salle-des-ventes" *ngIf =" articles$ != null ; else fetching">      
+  
+    <!-- <button (click)="showpaniercomponent=true">Afficher le panier</button> -->
+         
+
+    <app-panier  class="panier-container" [panier]="panier" (panierchange)="onPanierChange(articles)"  [showpaniercomponent]="showpaniercomponent" *ngIf = "showpaniercomponent" > </app-panier>       
+  
+    <section class="article-container  grid w-100 ">             
+        <app-articlecomponent [articles$]="articles$" [nbarticlespage]="nbArticlesPage"  (panierchange)="onPanierChange($event)"  > </app-articlecomponent> 
+    </section>       
+    <div class="breadcrump"> 
+        <ng-container  *ngFor="let breac of breadcrump;let i =index">      
+              
+            <a href="\{{breac}}">{{breac|titlecase}}</a>     
+            <span *ngIf="i < breadcrump.length - 1"> / </span>    
+      
+        </ng-container>
+    </div>     
+
+
+</div>      
+
+    
+<ng-template #fetching> 
+    <div>Fetching Articles...</div>
+</ng-template>

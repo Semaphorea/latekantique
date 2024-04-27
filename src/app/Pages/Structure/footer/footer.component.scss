@@ -1,0 +1,82 @@
+.footer{ 
+        // background: url('/assets/Images/Textures/Grunge - Craquele.jpg') repeat-x;
+        //   background-color: #111a31;
+        //   background-color: #161f35;
+          background-color: #23324a;
+          color:#ffa500;
+          & a{color:#ffa500;}
+        //  color:yellow;
+         font-weight:bold;
+        
+         .brand{font-family: Waterfall; }}
+         .credits{margin-left:1em;}
+
+         
+         @media screen and (min-width:768px) and (max-width:1100px){ 
+                .afooter,.horaires{
+                grid-column-start: 2!important;
+                grid-column-end: 2;
+                }
+                .copy{position:absolute; right:2rem; bottom:1rem;}
+                }
+
+                
+@media screen and (min-width:768px){  
+                                      .page-estimation{font-size: 1rem;}
+                                      .footer{
+                                                display: grid;        
+                                               column-count: 10;
+                                      
+                                               padding:2rem;
+                                   
+                                        
+                                       
+                                        & div {
+                                                justify-content: space-between;
+                                                
+                                             }
+                                             margin:0 15% 0 15%!important;   
+                                              width:70%; 
+                                              &  .copy {font-size: xx-small;margin: -1.5rem 2rem 1rem 80%;} 
+                                              &   .brand{font-size:1rem;}
+                                              & .afooter{
+                                                // grid-column-start:6;
+                                                // grid-column-end: 6; 
+                                                grid-row-start: 1;grid-row-end:1;
+                                                text-align: center;}
+                                
+                                        &  .horaires {               
+                                                text-align: center;
+                                                grid-row-start: 2;grid-row-end:2;
+                                                // grid-column-start:6;
+                                                // grid-column-end: 6; 
+                                        }
+                                        & .credits{margin:1rem auto auto 10%;font-size:x-small;}
+                                        }
+}
+              
+
+
+@media screen and (max-width:768px){ 
+                                       
+        .footer{position: relative; margin-top: 1rem!important; padding-top:1rem;}
+        .afooter{ display:flex;
+         justify-content: center;margin-bottom:1rem;}
+        
+        
+        .horaires{ 
+           & .intitule , & .donnees{
+                 display:flex;
+                 justify-content: center;
+           }  
+         }
+         .copy { font-size:x-small;float:right;margin:1rem 3rem 1rem 0; }  
+
+
+}
+
+
+
+@media screen and (max-width:468px) {
+
+.copy{margin: 1rem 3rem 1rem 35%;}  }

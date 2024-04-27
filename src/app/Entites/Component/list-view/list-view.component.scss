@@ -1,0 +1,29 @@
+.list-view {
+    background: #FFFFFF;
+    color: #444444;
+    box-shadow: 3px 0 3px 0 rgba(0,0,0,0.1), 0 2px 2px 0 rgba(0,0,0,0.15);
+    max-height: 250px;
+    overflow-y: auto;
+    position: absolute;
+    user-select: none;
+    z-index: 9999;
+
+    & > div {
+        align-items: stretch;
+        justify-content: stretch;
+        border-bottom: 1px solid #AAAAAA;
+        cursor: pointer;  
+        display: flex;
+        flex-direction: row;
+        font-size: 1rem;
+        line-height: 29px;
+        padding: 5px 10px;
+
+        &:hover {
+            background: #AAAAAA;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}

@@ -2,13 +2,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "allowSyntheticDefaultImports":true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
+    "noImplicitReturns": true,  
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
@@ -16,6 +17,13 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    
+
+    "paths":{
+      "stream":["node_modules/stream-browserify"],
+      "crypto":["node_modules/crypto-browserify"],
+      "tsc":["node_modules/tsc/bin/tsc"]   
+    },  
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
@@ -26,8 +34,15 @@
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
+    "enableIvy": true,      
     "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
+    "strictInputAccessModifiers": true,   
     "strictTemplates": true
-  }
+  },   
+  "include":[ "./polyfills.ts",  
+              // "src/node_modules/@types/node-process/node-process.d.ts",
+           
+  
+  ], 
+  "typeRoots": ["./node_modules/@types"]
 }

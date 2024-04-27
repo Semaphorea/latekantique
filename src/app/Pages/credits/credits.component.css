@@ -1,0 +1,15 @@
+ul li {
+  list-style: none;
+}
+
+ul {
+  margin-top: 1rem;
+}
+
+h3 {
+  font-size: 19px;
+}
+
+.page-credits {
+  padding-left: 2rem;
+}/*# sourceMappingURL=credits.component.css.map */

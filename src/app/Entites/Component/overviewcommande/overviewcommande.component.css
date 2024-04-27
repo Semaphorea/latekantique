@@ -1,0 +1,17 @@
+.selectionpaiement input {
+  margin: 1em;
+  margin-left: 5em;
+}
+
+.selectionpaiement .submit {
+  float: right;
+}
+
+.selectionpaiement {
+  margin: 3em;
+  margin-left: 25em;
+}
+
+.commandeoverview {
+  margin-top: 2em;
+}/*# sourceMappingURL=overviewcommande.component.css.map */

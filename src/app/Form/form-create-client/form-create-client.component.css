@@ -1,0 +1,62 @@
+.viewmodalnewclient {
+  display: none;
+}
+.viewmodalnewclient .viewmodalnewclient {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10000;
+  overflow: auto;
+}
+.viewmodalnewclient .viewmodalnewclient .viewmodalnewclient-body {
+  padding: 20px;
+  background: #fff;
+  margin: 40px;
+}
+.viewmodalnewclient .modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.93;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+
+body.viewmodalnewclient-open {
+  overflow: hidden;
+  position: absolute;
+}
+body.viewmodalnewclient-open .modal-content {
+  padding: 4em 10em;
+  height: 1529px !important;
+  opacity: 100%;
+}
+body.viewmodalnewclient-open #modalnewclient .viewmodalnewclient {
+  display: block !important;
+  z-index: 10000;
+  opacity: 100% !important;
+  position: fixed;
+  top: 0;
+  left: 20%;
+}
+body.viewmodalnewclient-open #modalnewclient .viewmodalnewclient .modal-content {
+  margin: 2em 20%;
+  width: 60%;
+  overflow-y: scroll;
+}
+body .modal-header -moz-#newclienttitle {
+  display: flex;
+  justify-content: center;
+  margin: 0 35%;
+}
+body .modal-header -webkit-#newclienttitle {
+  display: flex;
+  justify-content: center;
+  margin: 0 40%;
+}/*# sourceMappingURL=form-create-client.component.css.map */

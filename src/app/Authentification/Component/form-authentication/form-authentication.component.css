@@ -1,0 +1,34 @@
+.form-field {
+  margin: 1em;
+  width: 15%;
+}
+
+input {
+  margin-left: 1em;
+  float: right;
+}
+
+.login-button {
+  display: inline-block;
+  margin-left: 1em !important;
+}
+
+.button {
+  margin-top: 1em;
+}
+
+.newclient-button-parent {
+  display: inline-block;
+  margin-left: 8.5em;
+}
+
+.modal-dialogue {
+  background-color: #f5f5dc;
+  height: 100%;
+  width: 100%;
+}
+
+.modal-content {
+  height: 40em;
+  width: 100%;
+}/*# sourceMappingURL=form-authentication.component.css.map */

@@ -1,0 +1,42 @@
+<div class="page-content page-estimation-component">  
+ 
+
+
+    <div class="breadcrump">
+        <ng-container  *ngFor="let breac of breadcrump;let i =index">       
+              
+            <a href="\{{breac}}">{{breac| titlecase }}</a>   
+            <span *ngIf="i < breadcrump.length - 1"> / </span>    
+     
+        </ng-container> 
+       </div>
+
+    
+            <div class="expert-list"  *ngIf="experts !=null; else noContent">     
+            
+            <ng-container  *ngIf="experts!=null; else noContent" >
+           
+            <div class="expert-container" *ngFor="let exp of  experts" > 
+                 <div class="expert-image"> 
+                    
+                 <img  src="{{exp.getPhoto()?.getDirectory()}}/{{exp.getPhoto()?.getURL()}}" alt="{{exp.getFirstName().substring(0,1)+'.'+exp.getLastName().substring(0,1)+ '- photo'}}">
+                </div>
+                <h3>{{ exp.getLastName()+' '+ exp.getFirstName()}}</h3>
+                <ul>Diplomes : 
+                <li *ngFor="let diplome of exp?.getDiplomes()"  class="diplome">{{ diplome }}</li>
+                </ul>
+                <ul>Expériences : 
+                    <li *ngFor="let experience of exp?.getExperiences()" class="experience">   {{ experience }}</li>  
+                </ul>   
+            </div>     
+        </ng-container>
+        </div>
+ 
+     <ng-template #noContent><span>Pas de contenu !</span></ng-template> 
+  
+     <app-form-estimation></app-form-estimation>
+
+
+
+
+ </div>  

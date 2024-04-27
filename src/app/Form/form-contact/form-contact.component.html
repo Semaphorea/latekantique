@@ -1,0 +1,19 @@
+  
+    <form  class="form grid" [formGroup] ="form" >  
+         <label for="">Prénom</label>
+         <input  class="form-control"  type="text"       name="firstname"  formControlName="firstname"  placeholder="Firstname" required/>
+         <label for="">Nom</label>
+         <input  class="form-control"  type="text"       name="lastname"   formControlName="lastname"   placeholder="lastname"  required />
+         <label for="">Adresse</label>
+         <input  class="form-control"  type="email"       name="address"   formControlName="address"    placeholder="Address"    required />
+         <label for="">Subject</label>
+         <input  class="form-control"  type="text"       name="subject"    formControlName="subject"    placeholder="Subject"    required />
+         <label for="">Message</label>
+         <input  class="form-control"  type="textarea"   name="message"    formControlName="message"    placeholder="Message"    required />    
+         <button class="button form-control  estimation-submit " (click)="submit()" >Envoyer</button>      
+    </form>   
+
+
+
+
+

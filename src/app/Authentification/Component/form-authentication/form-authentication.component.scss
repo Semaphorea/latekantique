@@ -1,0 +1,29 @@
+.form-field{margin:1em; width: 15%;} 
+input{margin-left:1em;float:right;}  
+.login-button{display:inline-block ;margin-left:1em !important;}
+.button{margin-top:1em;}
+.newclient-button-parent {  display:inline-block; }  
+.modal-dialogue{background-color: #f5f5dc;height: 100%;width: 100%;} 
+.modal-content{height: 40em;width: 100%;}
+
+@media screen and (max-width:768px) {  
+
+    .form-field input{ margin:0;float:none;}   
+    .selectionpaiement fieldset label{ & img {width:75%;}}   
+}
+
+
+@media screen and (max-width:468px) {
+    .form-field{margin:1em; width: 50%;  
+            & input{float:none;}
+            & label{text-wrap: nowrap;}
+      } 
+    .commandTab { table-layout: fixed;
+                  & tbody tr { overflow-y: scroll;
+                           hyphens:auto;
+                   }
+        }
+
+        #selectionpaiement form fieldset label{ & img {width:30%;}}   
+        
+}

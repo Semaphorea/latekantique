@@ -1,0 +1,9 @@
+
+<div id="app">
+    <paypal-buttons id="paypal-button" class="paypal-button" [commande]="commande" #paypal [props]="{
+        createOrder: createOrder(), 
+        onApprove: onApprove
+    }"  [YOUR_CLIENT_ID]="YOUR_CLIENT_ID" ></paypal-buttons>   
+</div>
+
+

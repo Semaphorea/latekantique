@@ -1,0 +1,24 @@
+
+.header  {               
+             margin-left:15%; margin-right:15%;width:70%;
+         }  
+ .nav-main  {margin-left:15%; margin-right:15%;}      
+
+  
+ @media screen and (min-width:768px) and (max-width:1200px){ 
+    .nav ul li {margin-right:1rem!important;}    
+ }
+
+
+ @media screen and (max-width:768px) { 
+    .logo span{font-size: 3em;}
+    .logo img{ width:70%;}
+    .nav-main {width:70%;}    
+ }
+
+ @media screen and (max-width:468px) {   
+   .logo span{font-size: 2.5em;}
+   .logo img{ width:24%!important;}
+   .nav-main {width:70%;}    
+}
+

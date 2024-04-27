@@ -1,0 +1,22 @@
+.panier {
+  position: sticky;
+  display: block;
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 2000;
+}
+
+.panier button {
+  border-radius: 4px;
+}
+
+.panier-button {
+  margin: 0.5rem;
+  justify-content: center;
+}
+
+.list-panier-container {
+  padding: 0.2rem;
+  list-style: none;
+}/*# sourceMappingURL=panier.component.css.map */

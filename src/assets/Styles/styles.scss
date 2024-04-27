@@ -1,0 +1,483 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Bootstrap SCSS file. */
+//@import 'bootstrap/scss/bootstrap';
+
+
+main {
+   margin-left: 15%;
+   margin-right: 15%;
+   width: 70%;
+   margin-bottom: 4em;
+}
+
+:root {
+   --hauteurhf: 15%;
+   --body-size: fit-content;
+}
+
+$first-color :#23324a;
+$second-color :#ffa500;
+
+footer {
+   position: fixed;
+   bottom: 0;
+}
+
+
+body {
+   min-height: 11rem !important;
+   height: var(--body-size);
+   font-family: Helvetica, Arial, sans-serif;
+   font-size: 16px;
+   width: 100%;
+}
+
+/****
+*  Fonts
+****/
+
+/**
+@font-face {
+    font-family: Mistral;
+    src: url(".\Fonts\mistral.ttf");
+}**/
+
+@font-face {
+   font-family: Waterfall;
+   src: url("./Fonts/Waterfall/Waterfall-Regular.ttf");
+}
+
+.logo img {
+   margin-right: 1em;
+}
+
+.logo span {
+   font-family: Waterfall;
+   font-size: 5em;
+   color: $second-color ;
+}
+
+/****
+* Font -size
+****/
+
+h1 {
+   font-size: 1.5rem;
+   margin-bottom: 2rem;
+}
+
+h2 {
+   font-size: 1.2rem;
+   font-weight: bold;
+}
+
+h3 {
+   font-size: 1.5rem
+}
+
+/****
+*  Emplacement, Margin,  taille d'Element
+****/
+
+.header {
+   height: 10rem;
+   display: block;
+}
+
+app-accueil {
+   height: 100%;
+   margin-top: 4rem;
+   padding-top: 4rem;
+}
+
+.nav {
+   height: 4rem;
+   padding-top: 1rem;
+
+   margin-bottom: 2rem;
+}
+
+.nav {
+   border-radius: 8px 2px;
+   border: solid 3px $second-color ;
+}
+
+footer {
+   height: 10rem;
+
+}
+
+.page-content {
+   padding-top: 3rem;
+
+}
+
+
+/***
+* Placement Page
+***/
+
+//Page Credits 
+.logoStudi {
+   width: 8rem;
+   height: auto;
+}
+
+.logoBretagne {
+   position: absolute;
+   width: 60rem;
+   right: -15rem;
+   bottom: 15rem;
+}
+
+
+//Component
+.authentification {
+   margin: 2em 0 4em 0;
+}
+
+.form-createclient {
+   margin-top: 2em;
+
+   & .genre {
+      width: 2em !important;
+   }
+}
+
+// Page commande
+.selectionpaiement input {
+   margin: 1em;
+   margin-left: 5em;
+}
+
+.selectionpaiement .submit {
+   float: right;
+}
+
+.selectionpaiement {
+   margin: 3em;
+   margin-left: 25em;
+}
+
+
+
+
+
+
+
+
+/****
+*  Coloration Pages
+****/
+.panier button {
+   background-color: $second-color ;
+   border: solid 3px $second-color;
+   color: $first-color;
+}
+
+.panier button:hover {
+   color: #ff0000;
+}
+
+//Structure
+.nav {
+   background-color: $first-color !important;
+
+   & a {
+      color: $second-color;
+   }
+
+   box-shadow: 5px 5px 5px $first-color;
+}
+
+footer {
+   background-color: $first-color;
+   border-top: solid 0.5rem $second-color ;
+
+   & a {
+      color: $second-color;
+   }
+}
+
+.breadcrump a {
+   margin-bottom: 2rem;
+   color: $first-color;
+}
+
+.breadcrump a:active {
+   color: $second-color;
+}
+
+.breadcrump a:hover {
+   color: $second-color;
+}
+
+.breadcrump {
+   margin-bottom: 2rem;
+}
+
+
+//Page Estimation
+.estimation-submit:hover {
+   color: #ff0000 !important;
+   background-color: $first-color;
+}
+
+.estimation-submit {
+   background-color: $first-color;
+   color: $second-color !important;
+}
+
+.estimation-submit:mouseout {
+   background-color: $first-color;
+}
+
+
+//Page Salle des Ventes
+
+.articlesitem .card {
+   border: solid 3px $first-color;
+
+   & .card-header,
+   & .card-footer {
+      background-color: $first-color;
+      color: $second-color;
+   }
+
+   .card-article-button {
+      background-color: $second-color;
+      color: $first-color;
+      border-radius: 4px;
+   }
+
+   .card-article-button:hover {
+      color: #ff0000;
+   }
+
+}
+
+.pagemanagement ul li a {
+   color: $first-color;
+}
+
+.pagemanagement ul li a:hover {
+   color: $second-color;
+}
+
+//Panier
+.list-panier-container {
+   background-color: #fff;
+   border: solid 2px #23324a;
+   padding: 1rem !important;
+}
+
+
+
+//Component
+
+.form-createclient fieldset {
+   border: solid;
+   border-color: $second-color ;
+   border-radius: 4px;
+   margin: 1em auto;
+   padding: 1em;
+
+   & input {
+      float: right;
+   }
+}
+
+.createclient-submit {
+   background-color: $first-color;
+   color: $second-color;
+}
+
+.createclient-submit:hover {
+   color: #ff0000;
+}
+
+.modal-content {
+   width: 100%;
+   background-color: $second-color;
+}
+
+//overviewcommande
+
+.button {
+   background-color: $first-color;
+   color: $second-color
+}
+
+.button:hover {
+   color: #ff0000;
+}
+
+.button:focus-within {
+   background-color: $first-color;
+}
+
+.button:active {
+   border: solid 2px $second-color;
+}
+
+
+
+
+
+
+
+
+/****
+* Gestion Responsive Design
+****/
+
+
+@media screen and (max-width:768px) {
+   .logo  {
+      & img {
+      max-width: 45px;
+      max-height: 45px;
+      margin-top: 3em;}
+
+      & span {
+         font-size: 2em;
+      }
+   }
+
+   body {
+      font-size: 12px;
+      min-width: 15rem;
+      min-height: 65rem !important;
+   }
+
+   .nav-main {
+      object-fit: contain;
+      text-align: justify;
+
+      & ul li {
+         margin: 0 0.1em;
+      }
+
+   }
+
+   .form-control {
+      max-width: 100% !important;
+   }
+
+   h1 {
+      font-size: 1.2rem;
+      text-wrap: nowrap;
+   }
+
+   h2 {
+      font-size: 1.1rem;
+   }
+
+   h3 {
+      font-size: 1rem;
+   }
+
+   .footer {
+      margin: 0 5% 0 5% !important;
+      width: 90%;
+   }
+
+   /**Page Commande**/
+   .selectionpaiement {
+      margin: 0;
+
+      & fieldset {
+         display: flex;
+
+         & .typePaiment {
+            display: none;
+         }
+
+         & label {
+            vertical-align: baseline;
+
+            & img {
+               width: 4em;
+               height: 4em;
+               border: 1px solid #000;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width:768px) {
+   .logo img {
+      max-width: 100px;
+      max-height: 100px;
+   }
+
+   .page-accueil h1 {
+      margin: 1rem 40% 3rem 44%;
+   }
+
+   .breadcrump {
+      margin-left: 2%;
+   }
+}
+
+
+@media screen and (max-width:468px) {
+
+
+   .logo img {
+      width: 24%!important;
+      max-height: auto;
+      margin-top: 3em;
+   }
+
+   /**Général**/
+   main {
+      margin-bottom: 4em;
+   }
+
+   .nav-main {
+      width: fit-content;
+   }
+
+   .nav-main .nav ul li:nth-child(3) {
+      text-wrap: nowrap;
+   }
+
+   .navbar-nav {
+      background-color: $first-color;
+
+      padding-left: 1em;
+      
+      
+   }
+    .navbar-toggler{font-size:1rem ;margin-top: -0.5em;}
+
+   .page-accueil h1 {
+      margin: 1rem 40% 3rem 32%;
+   }
+
+
+   #selectionpaiement {
+      margin: 0px;
+
+
+      & fieldset {
+         & label {
+            max-width: 5.33em;  
+         }
+
+         & input {
+            margin-left: 1em;
+         }
+      }
+
+      & button[type='submit'] {
+         margin-top: 1em;
+      }
+   }
+
+
+}

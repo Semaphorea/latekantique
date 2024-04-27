@@ -1,0 +1,92 @@
+ 
+<div class="viewmodalnewclient" > 
+<div id="newclient" tabindex="-1" role="dialog" aria-labelledby="newclienttitle" aria-hidden="true">  
+    
+    <div class="modal-wrapper">
+  <div class="modal-dialog modal-dialog-center">
+   <div class="modal-content">
+ 
+        <div class="modal-header">
+           <div id="newclienttitle"> <h3 class="modal-title" > Nouveau Client</h3></div>
+            <button type="button" class="btn-close"  (click)="close()"  data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+ 
+        <div class="modal-body">
+                        <form  class="form form-createclient " #f="ngForm" (ngSubmit)="onSubmit(f)" method="POST" action=""> 
+                            <label for="genre">Genre</label><br/>   
+                            <select   id="genre"   name="genre"   [(ngModel)]="client.genre"  >\0  id=\1
+                            <option  class=" genre"    name="genre1"    value="M"  required >M</option>   
+                            <option class=" genre"     name="genre2"      value="F"  required >F</option>    
+                            <option  class=" genre"    name="genre3"   value="A"  required >A</option>
+                            </select>
+                            <br/>
+                            <label for="firstname">Prénom</label>
+
+                            <input  class="form-control"  type="text"            id="firstname" name="firstname"  [(ngModel)]="client.firstname"  placeholder="Firstname" required/>
+                            <label for="lastname">Nom</label>
+                            <input  class="form-control"  type="text"            id="lastname" name="lastname"   [(ngModel)]="client.lastname"   placeholder="Lastname"  required />
+                            <label for="phonenumber">Telephone</label>
+                            <input  class="form-control"  type="phone"           id="phonenumber" name="phonenumber"   [(ngModel)]="client.phoneNumber"   placeholder="Téléphone"  required />
+                            <label for="email">Email</label>
+                            <input  class="form-control"  type="email"            id="email" name="email"   [(ngModel)]="client.emailAddress"   placeholder="Email"  required autocomplete="off" />
+                            <label for="password">Mot de Passe</label>
+                            <input  class="form-control"  type="password"        id="password" name="password"  FormControlName="password"  [(ngModel)]="user.password"   placeholder="Password"  required /> 
+                            <label for="confirmpassword">Confirmation mot de passe</label>
+                            <input  class="form-control"  type="password"        id="confirmpassword" name="confirmpassword"   FormControlName="confirmepassword"  [(ngModel)]="confirmedPassword"   placeholder="Confirm Password"  required autocomplete="off" />
+                            
+                            <fieldset>
+                            <caption>Livraison</caption> 
+                                <label for="typeOfRoad">Type de Voie</label>
+                                <input  class="form-control"  type="text"        id="typeOfRoad" name="typeOfRoad"   [(ngModel)]="address.typeOfRoad"    placeholder="Type de voie"    required />
+                                <label for="streetNumber">Numéro</label>
+                                <input  class="form-control"  type="text"        id="streetNumber" name="streetNumber"   [(ngModel)]="address.streetNumber"    placeholder="N°" />
+                                <label for="address">Adresse de livraison</label>
+                                <input  class="form-control"  type="text"        id="address" name="address"   [(ngModel)]="address.address"   placeholder="Address"  autocomplete="off" required/>  
+                                <label for="complementaddress">Complément Adresse</label>
+                                <input  class="form-control"  type="text"        id="complementaddress" name="complementaddress"   [(ngModel)]="address.complementAddress"   placeholder="Complement address"   />
+                                <label for="postcode">Code Postal</label>
+                                <input  class="form-control"  type="text"        id="postcode" name="postcode"   [(ngModel)]="address.postCode"   placeholder="Code postal"  required />
+                                <label for="city">Ville</label>
+                                <input  class="form-control"  type="text"        id="city" name="city"   [(ngModel)]="address.city"   placeholder="Ville"  required />
+                                <label for="country">Country</label>
+                                <input  class="form-control"  type="text"        id="country" name="country"   [(ngModel)]="address.country"   placeholder="Country" autocomplete="off"  required />
+                            </fieldset>
+
+                            <fieldset> 
+                                <caption>Facturation</caption> 
+                                <label for="typeOfRoadbilling">Type de Voie</label>
+                                <input  class="form-control"  type="text"        id="typeOfRoadbilling" name="typeOfRoadbilling"   [(ngModel)]="billingAddress.typeOfRoad"    placeholder="Type de voie"     />
+                                <label for="streetNumberbilling">Numéro</label>
+                                <input  class="form-control"  type="text"        id="streetNumberbilling" name="streetNumberbilling"   [(ngModel)]="billingAddress.streetNumber"    placeholder="N°" />
+                                <label for="addressbilling">Adresse de Facturation</label>
+                                <input  class="form-control"  type="text"        id="addressbilling" name="addressbilling"   [(ngModel)]="billingAddress.address"   placeholder="Address"   />  
+                                <label for="complementaddressbilling">Complément Adresse</label>
+                                <input  class="form-control"  type="text"        id="complementaddressbilling" name="complementaddressbilling"   [(ngModel)]="billingAddress.complementAddress"   placeholder="Complement address"   />
+                                <label for="postcodebilling">Code Postal</label>
+                                <input  class="form-control"  type="text"        id="postcodebilling" name="postcodebilling"   [(ngModel)]="billingAddress.postCode"   placeholder="Code postal"   />
+                                <label for="citybilling">Ville</label>
+                                <input  class="form-control"  type="text"        id="citybilling" name="citybilling"   [(ngModel)]="billingAddress.city"   placeholder="Ville"   />
+                                <label for="countrybilling">Country</label>
+                                <input  class="form-control"  type="text"        id="countrybilling" name="countrybilling"   [(ngModel)]="billingAddress.country"   placeholder="Country"   /> 
+                            </fieldset>
+                        
+
+
+                            <button class="button form-control  createclient-submit " type="submit">Envoyer</button>     
+                            <div *ngIf="formPasswordGroup .errors?. ['passwordConfirmed'] " class="cross-validation-error-message alert alert-danger">
+                                    Vos mot de passe et mot de passe de confirmation ne correspondent pas. Veuillez les entrer de nouveau, s'il vous plaît.
+                            </div>
+                        </form>
+            
+        </div> 
+            <div class="modal-footer"> 
+                <button type="button" class="btn btn-outline-secondary">Effacer</button>
+
+                <button type="button" class="btn btn-primary" (click)="close()" data-bs-dismiss="modal">Fermer</button>  
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</div> 

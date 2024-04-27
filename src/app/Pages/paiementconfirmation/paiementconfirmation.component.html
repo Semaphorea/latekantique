@@ -1,0 +1,16 @@
+
+<ng-container *ngIf="paimentStatus!=null">  
+        <ng-content *ngIf = "paimentStatus === 'success'; then commandevalide "></ng-content>
+                
+        <ng-content  *ngIf = "paimentStatus === 'failure' ; then commandeinvalide"></ng-content>
+
+        <ng-template #commandevalide  commandevalidee="true">
+        
+            <p>Le Site LaTekantique vous remercie de l'achat effectué. Nous espérons qu'il vous apportera entière satisfaction et souhaitons vous revoir prochainement sur notre site.</p>
+        </ng-template>
+        <ng-template #commandeinvalide commandevalidee="false" >  
+            <p>Nous n'avons pas été en mesure de finaliser votre commande, nous vous invitons à réessayer ultérieurement.</p>  
+            <p>Si le problème persiste, veuillez prendre contact avec notre service client par téléphone au <a href="tel:0100000000">0100000000</a> ou par courriel à l'adresse :  <a href="mailto:serviceclient@laTekantique">serviceclient@laTekantique</a>.</p>
+        </ng-template> 
+  
+</ng-container>
